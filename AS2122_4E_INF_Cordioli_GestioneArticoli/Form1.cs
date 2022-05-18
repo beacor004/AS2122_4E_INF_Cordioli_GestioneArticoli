@@ -52,6 +52,7 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             txtCodice.Text = articoli.ElementAt(index).Value.Codice;
             txtDescrizione.Text = articoli.ElementAt(index).Value.Descrizione;
             txtPrezzo.Text = articoli.ElementAt(index).Value.Prezzo;
+            cmbUnita.Text = articoli.ElementAt(index).Value.Unita;
 
 
 
