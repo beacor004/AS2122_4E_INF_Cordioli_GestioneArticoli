@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AS2122_4E_INF_Cordioli_GestioneArticoli.Library;
 
 namespace AS2122_4E_INF_Cordioli_GestioneArticoli
 {
     public partial class frmMain : Form
     {
+        Dictionary<string, Articoli> articoli = new Dictionary<string, Articoli>();
         public frmMain()
         {
             InitializeComponent();
