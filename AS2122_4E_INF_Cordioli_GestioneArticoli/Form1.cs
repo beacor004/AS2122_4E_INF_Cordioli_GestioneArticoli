@@ -19,5 +19,16 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             InitializeComponent();
         }
 
+        private void btnAggiungi_Click(object sender, EventArgs e)
+        {
+            if (articoli.ContainsKey(txtCodice.Text))
+                articoli[txtCodice.Text] = new Articoli(txtCodice.Text, txtDescrizione.Text, Convert.ToInt32(txtPrezzo.Text), cmbUnita.Text);
+            else
+                //chiave non presente
+                articoli.Add(txtCodice.Text, new Articoli(txtCodice.Text, txtDescrizione.Text, Convert.ToInt32(txtPrezzo.Text), cmbUnita.Text));
+
+        }
     }
+    
 }
+

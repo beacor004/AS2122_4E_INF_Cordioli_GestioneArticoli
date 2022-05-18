@@ -30,19 +30,19 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtPrezzo = new System.Windows.Forms.TextBox();
+            this.cmbUnita = new System.Windows.Forms.ComboBox();
+            this.txtDescrizione = new System.Windows.Forms.TextBox();
+            this.txtCodice = new System.Windows.Forms.TextBox();
             this.btnAggiungi = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbVisualizza = new System.Windows.Forms.ComboBox();
             this.btnVisualizza = new System.Windows.Forms.Button();
             this.lstVisualizza = new System.Windows.Forms.ListBox();
-            this.txtCodice = new System.Windows.Forms.TextBox();
-            this.txtDescrizione = new System.Windows.Forms.TextBox();
-            this.cmbUnita = new System.Windows.Forms.ComboBox();
-            this.txtPrezzo = new System.Windows.Forms.TextBox();
             this.lblArticoli = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,32 +65,49 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dettagli Articoli";
             // 
-            // label1
+            // txtPrezzo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Codice";
+            this.txtPrezzo.Location = new System.Drawing.Point(126, 205);
+            this.txtPrezzo.Name = "txtPrezzo";
+            this.txtPrezzo.Size = new System.Drawing.Size(150, 31);
+            this.txtPrezzo.TabIndex = 7;
             // 
-            // label2
+            // cmbUnita
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 102);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Descrizione";
+            this.cmbUnita.FormattingEnabled = true;
+            this.cmbUnita.Items.AddRange(new object[] {
+            "NR",
+            "KG",
+            "Q",
+            "T"});
+            this.cmbUnita.Location = new System.Drawing.Point(168, 157);
+            this.cmbUnita.Name = "cmbUnita";
+            this.cmbUnita.Size = new System.Drawing.Size(182, 33);
+            this.cmbUnita.TabIndex = 6;
             // 
-            // label3
+            // txtDescrizione
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Unità di misura";
+            this.txtDescrizione.Location = new System.Drawing.Point(139, 102);
+            this.txtDescrizione.Name = "txtDescrizione";
+            this.txtDescrizione.Size = new System.Drawing.Size(150, 31);
+            this.txtDescrizione.TabIndex = 5;
+            // 
+            // txtCodice
+            // 
+            this.txtCodice.Location = new System.Drawing.Point(126, 43);
+            this.txtCodice.Name = "txtCodice";
+            this.txtCodice.Size = new System.Drawing.Size(150, 31);
+            this.txtCodice.TabIndex = 4;
+            // 
+            // btnAggiungi
+            // 
+            this.btnAggiungi.Location = new System.Drawing.Point(46, 248);
+            this.btnAggiungi.Name = "btnAggiungi";
+            this.btnAggiungi.Size = new System.Drawing.Size(242, 79);
+            this.btnAggiungi.TabIndex = 1;
+            this.btnAggiungi.Text = "Aggiungi/modifica articolo";
+            this.btnAggiungi.UseVisualStyleBackColor = true;
+            this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
             // 
             // label4
             // 
@@ -101,14 +118,32 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             this.label4.TabIndex = 3;
             this.label4.Text = "Prezzo";
             // 
-            // btnAggiungi
+            // label3
             // 
-            this.btnAggiungi.Location = new System.Drawing.Point(46, 248);
-            this.btnAggiungi.Name = "btnAggiungi";
-            this.btnAggiungi.Size = new System.Drawing.Size(242, 79);
-            this.btnAggiungi.TabIndex = 1;
-            this.btnAggiungi.Text = "Aggiungi/modifica articolo";
-            this.btnAggiungi.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Unità di misura";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Descrizione";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Codice";
             // 
             // label5
             // 
@@ -146,40 +181,6 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             this.lstVisualizza.Name = "lstVisualizza";
             this.lstVisualizza.Size = new System.Drawing.Size(312, 329);
             this.lstVisualizza.TabIndex = 4;
-            // 
-            // txtCodice
-            // 
-            this.txtCodice.Location = new System.Drawing.Point(126, 43);
-            this.txtCodice.Name = "txtCodice";
-            this.txtCodice.Size = new System.Drawing.Size(150, 31);
-            this.txtCodice.TabIndex = 4;
-            // 
-            // txtDescrizione
-            // 
-            this.txtDescrizione.Location = new System.Drawing.Point(139, 102);
-            this.txtDescrizione.Name = "txtDescrizione";
-            this.txtDescrizione.Size = new System.Drawing.Size(150, 31);
-            this.txtDescrizione.TabIndex = 5;
-            // 
-            // cmbUnita
-            // 
-            this.cmbUnita.FormattingEnabled = true;
-            this.cmbUnita.Items.AddRange(new object[] {
-            "NR",
-            "KG",
-            "Q",
-            "T"});
-            this.cmbUnita.Location = new System.Drawing.Point(168, 157);
-            this.cmbUnita.Name = "cmbUnita";
-            this.cmbUnita.Size = new System.Drawing.Size(182, 33);
-            this.cmbUnita.TabIndex = 6;
-            // 
-            // txtPrezzo
-            // 
-            this.txtPrezzo.Location = new System.Drawing.Point(126, 205);
-            this.txtPrezzo.Name = "txtPrezzo";
-            this.txtPrezzo.Size = new System.Drawing.Size(150, 31);
-            this.txtPrezzo.TabIndex = 7;
             // 
             // lblArticoli
             // 
