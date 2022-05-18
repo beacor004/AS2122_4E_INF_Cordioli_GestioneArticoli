@@ -34,24 +34,33 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAggiungi = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.cmbVisualizza = new System.Windows.Forms.ComboBox();
+            this.btnVisualizza = new System.Windows.Forms.Button();
+            this.lstVisualizza = new System.Windows.Forms.ListBox();
+            this.txtCodice = new System.Windows.Forms.TextBox();
+            this.txtDescrizione = new System.Windows.Forms.TextBox();
+            this.cmbUnita = new System.Windows.Forms.ComboBox();
+            this.txtPrezzo = new System.Windows.Forms.TextBox();
+            this.lblArticoli = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.txtPrezzo);
+            this.groupBox1.Controls.Add(this.cmbUnita);
+            this.groupBox1.Controls.Add(this.txtDescrizione);
+            this.groupBox1.Controls.Add(this.txtCodice);
+            this.groupBox1.Controls.Add(this.btnAggiungi);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(25, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(310, 367);
+            this.groupBox1.Size = new System.Drawing.Size(391, 373);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dettagli Articoli";
@@ -59,7 +68,7 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 46);
+            this.label1.Location = new System.Drawing.Point(34, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 25);
             this.label1.TabIndex = 0;
@@ -68,7 +77,7 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 96);
+            this.label2.Location = new System.Drawing.Point(31, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 1;
@@ -77,7 +86,7 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 136);
+            this.label3.Location = new System.Drawing.Point(31, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 25);
             this.label3.TabIndex = 2;
@@ -86,20 +95,20 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 182);
+            this.label4.Location = new System.Drawing.Point(34, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Prezzo";
             // 
-            // button1
+            // btnAggiungi
             // 
-            this.button1.Location = new System.Drawing.Point(46, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 79);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Aggiungi/modifica articolo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAggiungi.Location = new System.Drawing.Point(46, 248);
+            this.btnAggiungi.Name = "btnAggiungi";
+            this.btnAggiungi.Size = new System.Drawing.Size(242, 79);
+            this.btnAggiungi.TabIndex = 1;
+            this.btnAggiungi.Text = "Aggiungi/modifica articolo";
+            this.btnAggiungi.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -110,42 +119,86 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             this.label5.TabIndex = 1;
             this.label5.Text = "Articoli";
             // 
-            // comboBox1
+            // cmbVisualizza
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbVisualizza.FormattingEnabled = true;
+            this.cmbVisualizza.Items.AddRange(new object[] {
             "Visualizza Articoli"});
-            this.comboBox1.Location = new System.Drawing.Point(445, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 33);
-            this.comboBox1.TabIndex = 2;
+            this.cmbVisualizza.Location = new System.Drawing.Point(445, 25);
+            this.cmbVisualizza.Name = "cmbVisualizza";
+            this.cmbVisualizza.Size = new System.Drawing.Size(182, 33);
+            this.cmbVisualizza.TabIndex = 2;
             // 
-            // button2
+            // btnVisualizza
             // 
-            this.button2.Location = new System.Drawing.Point(645, 25);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnVisualizza.Location = new System.Drawing.Point(645, 25);
+            this.btnVisualizza.Name = "btnVisualizza";
+            this.btnVisualizza.Size = new System.Drawing.Size(112, 34);
+            this.btnVisualizza.TabIndex = 3;
+            this.btnVisualizza.Text = "...";
+            this.btnVisualizza.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lstVisualizza
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(445, 78);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(312, 329);
-            this.listBox1.TabIndex = 4;
+            this.lstVisualizza.FormattingEnabled = true;
+            this.lstVisualizza.ItemHeight = 25;
+            this.lstVisualizza.Location = new System.Drawing.Point(445, 78);
+            this.lstVisualizza.Name = "lstVisualizza";
+            this.lstVisualizza.Size = new System.Drawing.Size(312, 329);
+            this.lstVisualizza.TabIndex = 4;
+            // 
+            // txtCodice
+            // 
+            this.txtCodice.Location = new System.Drawing.Point(126, 43);
+            this.txtCodice.Name = "txtCodice";
+            this.txtCodice.Size = new System.Drawing.Size(150, 31);
+            this.txtCodice.TabIndex = 4;
+            // 
+            // txtDescrizione
+            // 
+            this.txtDescrizione.Location = new System.Drawing.Point(139, 102);
+            this.txtDescrizione.Name = "txtDescrizione";
+            this.txtDescrizione.Size = new System.Drawing.Size(150, 31);
+            this.txtDescrizione.TabIndex = 5;
+            // 
+            // cmbUnita
+            // 
+            this.cmbUnita.FormattingEnabled = true;
+            this.cmbUnita.Items.AddRange(new object[] {
+            "NR",
+            "KG",
+            "Q",
+            "T"});
+            this.cmbUnita.Location = new System.Drawing.Point(168, 157);
+            this.cmbUnita.Name = "cmbUnita";
+            this.cmbUnita.Size = new System.Drawing.Size(182, 33);
+            this.cmbUnita.TabIndex = 6;
+            // 
+            // txtPrezzo
+            // 
+            this.txtPrezzo.Location = new System.Drawing.Point(126, 205);
+            this.txtPrezzo.Name = "txtPrezzo";
+            this.txtPrezzo.Size = new System.Drawing.Size(150, 31);
+            this.txtPrezzo.TabIndex = 7;
+            // 
+            // lblArticoli
+            // 
+            this.lblArticoli.AutoSize = true;
+            this.lblArticoli.Location = new System.Drawing.Point(151, 399);
+            this.lblArticoli.Name = "lblArticoli";
+            this.lblArticoli.Size = new System.Drawing.Size(24, 25);
+            this.lblArticoli.TabIndex = 5;
+            this.lblArticoli.Text = "...";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblArticoli);
+            this.Controls.Add(this.lstVisualizza);
+            this.Controls.Add(this.btnVisualizza);
+            this.Controls.Add(this.cmbVisualizza);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMain";
@@ -160,15 +213,20 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAggiungi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox cmbVisualizza;
+        private System.Windows.Forms.Button btnVisualizza;
+        private System.Windows.Forms.ListBox lstVisualizza;
+        private System.Windows.Forms.TextBox txtPrezzo;
+        private System.Windows.Forms.ComboBox cmbUnita;
+        private System.Windows.Forms.TextBox txtDescrizione;
+        private System.Windows.Forms.TextBox txtCodice;
+        private System.Windows.Forms.Label lblArticoli;
     }
 }
 
