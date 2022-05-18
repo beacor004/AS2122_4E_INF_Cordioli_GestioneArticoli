@@ -37,7 +37,7 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
                 case "Visualizza Articoli":
                     foreach (KeyValuePair<string, Articoli> a in Articoli)
                     {
-                        lstVisualizza.Items.Add(Articoli.Stampa());
+                        lstVisualizza.Items.Add(a.Value.Stampa());
                     }
                     break;
             }
