@@ -182,6 +182,7 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             this.lstVisualizza.Name = "lstVisualizza";
             this.lstVisualizza.Size = new System.Drawing.Size(312, 329);
             this.lstVisualizza.TabIndex = 4;
+            this.lstVisualizza.SelectedIndexChanged += new System.EventHandler(this.lstVisualizza_SelectedIndexChanged);
             // 
             // lblArticoli
             // 

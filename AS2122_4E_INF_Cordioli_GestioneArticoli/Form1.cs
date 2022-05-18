@@ -42,6 +42,20 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
                     break;
             }
         }
+
+        private void lstVisualizza_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string curItem = lstVisualizza.SelectedItem.ToString();
+
+            int index = lstVisualizza.FindString(curItem);
+
+            txtCodice.Text = articoli.ElementAt(index).Value.Codice;
+            txtDescrizione.Text = articoli.ElementAt(index).Value.Descrizione;
+            txtPrezzo.Text = articoli.ElementAt(index).Value.Prezzo;
+
+
+
+        }
     }
     
 }
