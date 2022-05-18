@@ -28,6 +28,20 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
                 articoli.Add(txtCodice.Text, new Articoli(txtCodice.Text, txtDescrizione.Text, Convert.ToInt32(txtPrezzo.Text), cmbUnita.Text));
 
         }
+
+        private void btnVisualizza_Click(object sender, EventArgs e)
+        {
+            lstVisualizza.Items.Clear();
+            switch (cmbVisualizza.Text)
+            {
+                case "Visualizza Articoli":
+                    foreach (KeyValuePair<string, Articoli> a in Articoli)
+                    {
+                        lstVisualizza.Items.Add(Articoli.Stampa());
+                    }
+                    break;
+            }
+        }
     }
     
 }

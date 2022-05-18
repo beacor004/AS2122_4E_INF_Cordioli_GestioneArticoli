@@ -172,6 +172,7 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli
             this.btnVisualizza.TabIndex = 3;
             this.btnVisualizza.Text = "...";
             this.btnVisualizza.UseVisualStyleBackColor = true;
+            this.btnVisualizza.Click += new System.EventHandler(this.btnVisualizza_Click);
             // 
             // lstVisualizza
             // 

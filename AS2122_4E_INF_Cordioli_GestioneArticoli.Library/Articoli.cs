@@ -24,5 +24,10 @@ namespace AS2122_4E_INF_Cordioli_GestioneArticoli.Library
             this.unita = unita;
         }
 
+        public string Stampa()
+        {
+            return $"{codice} {descrizione} {prezzo} {unita}";
+        }
+
     }
 }
